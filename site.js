@@ -93,22 +93,48 @@ $(document).ready(function (){
 
 });
 
-function validateEmailAndPhone(email, phone) {
-	return validateEmail(email) && validatePhone(phone);
+function validateForm() {
+	var valid = true;
+	var phone = document.getElementById('phone').value;
+	var email = document.getElementById('_replyto').value
+	if (validatePhone(phone) && validateEmail(email)) {
+		sanitize();
+	} else {
+		valid = false;
+	}
+	return valid;
+}
+
+function sanitize() {
+	var firstLastName = document.getElementById('firstLastName').value;
+	if (undefined != firstLastName) {
+		var s = new Sanitize();
+		document.getElementById('firstLastName').value = s.clean_node(firstLastName).innerHTML;
+	}
+	var address = document.getElementById('address').value;
+	if (undefined != address) {
+		var s = new Sanitize();
+		document.getElementById('address').value = s.clean_node(address).innerHTML;
+	}
+	var comments = document.getElementById('comments').value;
+	if (undefined != comments) {
+		var s = new Sanitize();
+		document.getElementById('comments').value = s.clean_node(comments).innerHTML;
+	}
 }
 
 function validatePhone(phone) {
 	var re = /\D+/g;
 	var cleanphone = phone.replace(re,"");
-	if (cleanphone.length < 10) {
+	if (cleanphone.length != 10) {
 		alert("Please enter a valid phone number including area code");
-		return (false);
+		return false;
 	}
 	return true;
 }
 
-function validateEmail(mail) {
-	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+function validateEmail(email) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 		return true;
 	}
 	alert("Please enter a valid email address")
