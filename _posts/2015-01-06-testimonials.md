@@ -1,6 +1,6 @@
 ---
 title: "testimonials"
-bg: turquoise
+bg: red
 color: white
 style: center
 fa-icon: heart
