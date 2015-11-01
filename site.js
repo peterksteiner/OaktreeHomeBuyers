@@ -94,36 +94,13 @@ $(document).ready(function (){
 });
 
 function validateForm() {
-	var valid = true;
+	var valid = false;
 	var phone = document.getElementById('phone').value;
 	var email = document.getElementById('_replyto').value
 	if (validatePhone(phone) && validateEmail(email)) {
-		sanitize();
-	} else {
-		valid = false;
-	}
+		valid = true;
+	} 
 	return valid;
-}
-
-function sanitize() {
-	var firstLastName = document.getElementById('firstLastName');
-	if (undefined != firstLastName) {
-		var s = new Sanitize();
-		var cleanName = s.clean_node(firstLastName);
-		document.getElementById('firstLastName').value = cleanName.innerHTML;
-	}
-	var address = document.getElementById('address');
-	if (undefined != address) {
-		var s = new Sanitize();
-		var cleanAddress = s.clean_node(address);
-		document.getElementById('address').value = cleanAddress.innerHTML;
-	}
-	var comments = document.getElementById('comments');
-	if (undefined != comments) {
-		var s = new Sanitize();
-		var cleanComments = s.clean_node(comments);
-		document.getElementById('comments').value = cleanComments.innerHTML;
-	}
 }
 
 function validatePhone(phone) {
