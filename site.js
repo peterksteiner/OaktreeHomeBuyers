@@ -109,17 +109,20 @@ function sanitize() {
 	var firstLastName = document.getElementById('firstLastName').value;
 	if (undefined != firstLastName) {
 		var s = new Sanitize();
-		document.getElementById('firstLastName').value = s.clean_node(firstLastName).innerHTML;
+		var cleanName = s.clean_node(firstLastName);
+		document.getElementById('firstLastName').value = cleanName.innerHTML;
 	}
 	var address = document.getElementById('address').value;
 	if (undefined != address) {
 		var s = new Sanitize();
-		document.getElementById('address').value = s.clean_node(address).innerHTML;
+		var cleanAddress = s.clean_node(address);
+		document.getElementById('address').value = cleanAddress.innerHTML;
 	}
 	var comments = document.getElementById('comments').value;
 	if (undefined != comments) {
 		var s = new Sanitize();
-		document.getElementById('comments').value = s.clean_node(comments).innerHTML;
+		var cleanComments = s.clean_node(comments);
+		document.getElementById('comments').value = cleanComments.innerHTML;
 	}
 }
 
