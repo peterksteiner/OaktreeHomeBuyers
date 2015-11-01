@@ -93,3 +93,24 @@ $(document).ready(function (){
 
 });
 
+function validateEmailAndPhone(email, phone) {
+	return validateEmail(email) && validatePhone(phone);
+}
+
+function validatePhone(phone) {
+	var re = /\D+/g;
+	var cleanphone = phone.replace(re,"");
+	if (cleanphone.length < 10) {
+		alert("Please enter a valid phone number including area code");
+		return (false);
+	}
+	return true;
+}
+
+function validateEmail(mail) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+		return true;
+	}
+	alert("Please enter a valid email address")
+	return false;
+}
