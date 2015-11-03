@@ -20,7 +20,7 @@ keywords:    "oaktreehomebuyers, homebuyers, montgomery county, foreclosure, sho
 description: "OAK TREE HOMEBUYERS pays cash for your house. We buy homes in any condition in Montgomery County, PA"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-icon-72x72.png"
-google_analytics_key: ## put YOUR key here to enable tracking! (blank to disable)
+google_analytics_key: UA-69610849-1
 
 
 ### template colors, used site-wide via css ###
