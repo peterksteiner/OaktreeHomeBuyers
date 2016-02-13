@@ -93,3 +93,30 @@ $(document).ready(function (){
 
 });
 
+function validateForm() {
+	var valid = false;
+	var phone = document.getElementById('phone').value;
+	var email = document.getElementById('_replyto').value
+	if (validatePhone(phone) && validateEmail(email)) {
+		valid = true;
+	} 
+	return valid;
+}
+
+function validatePhone(phone) {
+	var re = /\D+/g;
+	var cleanphone = phone.replace(re,"");
+	if (cleanphone.length != 10) {
+		alert("Please enter a valid phone number including area code");
+		return false;
+	}
+	return true;
+}
+
+function validateEmail(email) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+		return true;
+	}
+	alert("Please enter a valid email address")
+	return false;
+}
