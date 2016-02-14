@@ -7,7 +7,10 @@
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+# highlighter: pygments
+exclude: [CNAME, README.md, .gitignore]
+permalink: / ## disables post output
+timezone: null
 
 
 # Site settings
@@ -30,3 +33,5 @@ colors:
   turquoise: '#0fbfcf'
   red:       '#ff0000'
 
+kramdown:
+  auto_ids:  false
