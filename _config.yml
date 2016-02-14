@@ -21,6 +21,7 @@ favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-icon-72x72.png"
 google_analytics_key: UA-69610849-1
 
+permalink : /:year
 
 ### template colors, used site-wide via css ###
 colors:
