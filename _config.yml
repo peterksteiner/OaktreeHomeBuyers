@@ -1,23 +1,19 @@
----
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-port: 4000
-host: 0.0.0.0
-safe: false
-
-
-### site serving configuration ###
-exclude: [CNAME, README.md, .gitignore]
-permalink: / ## disables post output
-timezone: null
-lsi: false
+# Build settings
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 
 
-### content configuration ###
+# Site settings
 title:       "OAK TREE HOMEBUYERS | Cash For Your House"
 keywords:    "oaktreehomebuyers, homebuyers, montgomery county, foreclosure, short sale, bankruptcy, pre-foreclosure, debt, debt reduction, debt services, upside down, probate, relocation, mortgage, two mortgages"
-description: "OAK TREE HOMEBUYERS pays cash for your house. We buy homes in any condition in Montgomery County, PA"
+description: "OAK TREE HOMEBUYERS pays cash for your house. We buy homes in any condition in Montgomery, Delaware, and Chester Counties of Pennsylvania"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-icon-72x72.png"
 google_analytics_key: UA-69610849-1
@@ -33,4 +29,4 @@ colors:
   orange:    '#fab125'
   turquoise: '#0fbfcf'
   red:       '#ff0000'
-  
+
