@@ -30,7 +30,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		font-family: helvetica-neue, helvetica, arial, san-serif;
+		font-family: helvetica, arial, san-serif;
 		vertical-align: baseline; }
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
@@ -53,7 +53,7 @@
 ================================================== */
 	body {
 		background: #fff;
-		font: 16px/1.5 verdana, helvetica-neue, helvetica, arial, san-serif;
+		font: helvetica, arial, san-serif;
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
